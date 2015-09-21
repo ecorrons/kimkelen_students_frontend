@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Kimkëlen - Acceso estudiantes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Students frontend">
+  <meta name="author" content="Corrons María Emilia">
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <%= evil_icons_sprite %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render 'navbar' %>
+  <%= render 'flashes' %>
+  <div class="container">
+    <%= yield %>
+  </div>
+  <%= render 'footer' %>
+</body>
+</html>
