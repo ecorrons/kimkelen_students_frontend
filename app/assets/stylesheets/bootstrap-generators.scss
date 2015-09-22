@@ -3,6 +3,7 @@
 
 body {
   padding-top: $navbar-height + 10px;
+  background-color: #F9F9F9 !important;
 }
 
 .page-header {
@@ -26,7 +27,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 .text-muted {
-  color: #777777;
+  color: #FFF;
   text-align: center;
   font-size: 11px;
   padding-top: 25px;

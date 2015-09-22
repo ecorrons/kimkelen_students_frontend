@@ -16,13 +16,25 @@
  *= require_self
  */
 
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: #2C398A !important;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus{
+  background-color: #2C398A !important;
+}
+
+.navbar-right{
+  padding-right: 3em;
+}
+
 .panel {
     margin-top: 2%;
 }
 
 .panel-info {
   width: 50%;
-
 }
 
 .logo {
@@ -30,72 +42,66 @@
     padding: 2px;
     width: 130px;
     height: 50px;
-    margin-top: 3px;
+    margin-top:  -11px;
+}
+
+#icon-envelope {
+    padding-top: 17px
 }
 
 .icon {
-    fill: #ff4738;
+    //fill: #ff4738;
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
     height: 60px;
-    background-color: #f5f5f5;
+    background-color: #171F52;
 }
 
-#icon-envelope {
-    padding-top: 5px
-}
 
 .side-list {
-    margin-top: 35px;
+    margin-top: 8em;;
 }
-
-
-
 
 
 .photo {
-    top: 0;
-    left: 0;
-    border-radius: 6px;
-    opacity: 0.5;
-    z-index: 2;
     width: 100%;
-    height: 100%;
-    position: absolute;
+    height: 10%;
 }
 
-.profile {
-    padding: 0px;
-    margin: 0px;
-    border-radius: 6px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
-    height: 300px;
-    position: relative;
+.thumbnail{
+  border: 0 !important;
 }
 
-.name {
-    z-index: 100;
-    position: absolute;
-    font-size: 22px;
-    font-weight: bold;
-    left: 15px;
-    top: 195px;
-    color: #777777;
+.caption{
+  -webkit-box-shadow: 11px 9px 21px -1px rgba(0,0,0,0.17);
+  -moz-box-shadow: 11px 9px 21px -1px rgba(0,0,0,0.17);
+  box-shadow: 11px 9px 21px -1px rgba(0,0,0,0.17);
 }
 
-.orientation {
-    z-index: 100;
-    position: absolute;
-    font-size: 15px;
-    font-weight: bold;
-    left: 15px;
-    top: 250px;
-    color: #777777;
+.data{
+   margin-left: 1.5em;
+  .name {
+      z-index: 100;
+      //position: absolute;
+      font-size: 22px;
+      font-weight: bold;
+      left: 4em;
+      color: #777777;
+  }
+
+  .orientation {
+      z-index: 100;
+      //position: absolute;
+      font-size: 15px;
+      font-weight: bold;
+      left: 5em;
+      color: #777777;
+  }
 }
 
 div.clickable {

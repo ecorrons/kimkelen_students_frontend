@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap
 //= require bootstrap-material-design
+//= require js-initializers
 //= require_tree .

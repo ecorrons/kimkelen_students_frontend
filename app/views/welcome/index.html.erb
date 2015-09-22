@@ -1,44 +1,53 @@
 <p style="margin: 75px;"></p>
 
-<div class="col-md-4 profile">
-  <img class="photo" src="http://www.exposureguide.com/images/teenager-photography-tips.jpg" alt="photo">
-  <h3 class="name">María Pruebas</h3>
-  <span class="orientation">6°C Orientación Ciencias Naturales</span>
-</div>
 
-<div class="col-md-8 side-list">
-  <div class="list-group">
-    <div class="list-group-item clickable">
-      <div class="row-action-primary">
-        <%= evil_icon 'ei-star', size: :m %>
-      </div>
-      <div class="row-content">
-        <div class="action-secondary"><i class="mdi-material-info"></i></div>
-        <p class="list-group-item-heading"><%= t('Marks') %></p>
-        <%= link_to('Marks', marks_path) %>
-        <p class="list-group-item-text">Mirá tu historial de calificaciones de cursadas y finales de materias.</p>
+<div class="row">
+  <div class="col-md-6">
+     <div class="thumbnail">
+      <div class="caption">
+        <%= image_tag("student.jpg", alt: "photo", class: 'photo') %>
+        <div class="data">
+          <h3 class="name">María Pruebas</h3>
+          <span class="orientation">6°C Orientación Ciencias Naturales</span>
+        </div>  
       </div>
     </div>
-    <div class="list-group-separator"></div>
-    <div class="list-group-item clickable">
-      <div class="row-action-primary">
-        <%= evil_icon 'ei-calendar', size: :m %>
+  </div>
+
+  <div class="col-md-6 side-list">
+    <div class="list-group">
+      <div class="list-group-item clickable">
+        <div class="row-action-primary">
+          <%= evil_icon 'ei-star', size: :m %>
+        </div>
+        <div class="row-content">
+          <div class="action-secondary"><i class="mdi-material-info"></i></div>
+          <p class="list-group-item-heading"><%= t('Marks') %></p>
+          <%= link_to('Marks', marks_path) %>
+          <p class="list-group-item-text">Mirá tu historial de calificaciones de cursadas y finales de materias.</p>
+        </div>
       </div>
-      <div class="row-content">
-        <div class="action-secondary"><i class="mdi-material-info"></i></div>
-        <p class="list-group-item-heading">Inasistencias a clase</p><%= link_to('Attendances', attendances_path) %>
-        <p class="list-group-item-text">Verificá tu registro de inasistencias y retrasos.</p>
+      <div class="list-group-separator"></div>
+      <div class="list-group-item clickable">
+        <div class="row-action-primary">
+          <%= evil_icon 'ei-calendar', size: :m %>
+        </div>
+        <div class="row-content">
+          <div class="action-secondary"><i class="mdi-material-info"></i></div>
+          <p class="list-group-item-heading">Inasistencias a clase</p><%= link_to('Attendances', attendances_path) %>
+          <p class="list-group-item-text">Verificá tu registro de inasistencias y retrasos.</p>
+        </div>
       </div>
-    </div>
-    <div class="list-group-separator"></div>
-    <div class="list-group-item">
-      <div class="row-action-primary">
-        <%= evil_icon 'ei-eye', size: :m %>
-      </div>
-      <div class="row-content">
-        <div class="action-secondary"><i class="mdi-material-info"></i></div>
-        <h4 class="list-group-item-heading">Sanciones disciplinarias</h4>
-        <p class="list-group-item-text">Consultá las sanciones disciplinarias y apercibimientos que te han imputado.</p>
+      <div class="list-group-separator"></div>
+      <div class="list-group-item">
+        <div class="row-action-primary">
+          <%= evil_icon 'ei-eye', size: :m %>
+        </div>
+        <div class="row-content">
+          <div class="action-secondary"><i class="mdi-material-info"></i></div>
+          <h4 class="list-group-item-heading">Sanciones disciplinarias</h4>
+          <p class="list-group-item-text">Consultá las sanciones disciplinarias y apercibimientos que te han imputado.</p>
+        </div>
       </div>
     </div>
   </div>
