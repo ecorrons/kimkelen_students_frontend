@@ -1,13 +1,11 @@
 class WelcomeController < ApplicationController
-  before_action :set_student, only: [:index]
 
   # GET /welcome
   def index
-  end
+    response = Faraday.get (Settings.api.url + '/students/2003'), content_type: 'application/json'
 
-  private
-  # Use callbacks to share common setup or constraints between actions.
-  def set_student
-    @student = Student.first
+    res = JSON.parse response.body
+    @student = res['student']
+    @person = @student['person']
   end
 end

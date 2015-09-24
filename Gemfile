@@ -3,7 +3,6 @@ source 'https://rails-assets.org'
 
 # Core
 gem 'rails',        '~> 4.2.0.rc3'
-gem 'mysql2',       '~> 0.3.16'
 gem 'rails-i18n',   github: 'svenfuchs/rails-i18n', branch: 'master' # For 4.x
 
 ###############################################################################################################
@@ -28,6 +27,12 @@ group :development do
   gem 'better_errors',            '~> 1.1.0'
   gem 'spring',                   '~> 1.1.3'
 end
+
+# API connect
+gem 'faraday'
+
+# Rails custom configurations
+gem 'rails_config',                    '~> 0.4.2'
 
 # Test tools
 group :test do
