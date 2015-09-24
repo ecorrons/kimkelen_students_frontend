@@ -1,54 +1,72 @@
 <p style="margin: 75px;"></p>
 
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-7">
      <div class="thumbnail">
       <div class="caption">
-        <%= image_tag("student.jpg", alt: "photo", class: 'photo') %>
+        <%= image_tag("student2.jpg", alt: "photo", class: 'photo') %>
         <div class="data">
           <h3 class="name"><%= @person['firstname'] %></h3>
           <span class="orientation">6°C Orientación Ciencias Naturales</span>
+          <h1><i class="mdi-content-add-circle col-md-offset-10 icon-plus"></i></h1>
         </div>  
 
       </div>
     </div>
   </div>
 
-  <div class="col-md-6 side-list">
+  <div class="col-md-5 side-list">
     <div class="list-group">
-      <div class="list-group-item clickable">
-        <div class="row-action-primary">
-          <%= evil_icon 'ei-star', size: :m %>
-        </div>
-        <div class="row-content">
-          <div class="action-secondary"><i class="mdi-material-info"></i></div>
-          <p class="list-group-item-heading"><%= t('Marks') %></p>
-          <%= link_to('Marks', marks_path) %>
-          <p class="list-group-item-text">Mirá tu historial de calificaciones de cursadas y finales de materias.</p>
+
+      <div class="panel-default">
+        <div class="panel-body home-boxes1">
+          <div class="list-group-item clickable">
+            <div class="row-action-primary">
+              <%#= evil_icon 'ei-star', size: :m %>
+              <i class="mdi-action-grade"></i>
+            </div>
+            <div class="row-content">
+              <div class="action-secondary"><i class="mdi-material-info"></i></div>
+              <p class="list-group-item-heading"><%= t('Marks') %></p>
+              <h5><strong><i><%= link_to('Marks', marks_path) %></i></strong></h5>
+              <p class="list-group-item-text">Mirá tu historial de calificaciones de cursadas y finales de materias.</p>
+            </div>
+          </div>
+        </div>     
+      </div>
+
+      <div class="panel-default">
+        <div class="panel-body home-boxes2">
+          <div class="list-group-item clickable">
+            <div class="row-action-primary">
+              <i class="mdi-action-event"></i>
+            </div>
+            <div class="row-content">
+              <div class="action-secondary"><i class="mdi-material-info"></i></div>
+              <p class="list-group-item-heading">Inasistencias a clase</p>
+              <h5><strong><i><%= link_to('Attendances', attendances_path) %></i></strong></h5>
+              <p class="list-group-item-text">Verificá tu registro de inasistencias y retrasos.</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="list-group-separator"></div>
-      <div class="list-group-item clickable">
-        <div class="row-action-primary">
-          <%= evil_icon 'ei-calendar', size: :m %>
-        </div>
-        <div class="row-content">
-          <div class="action-secondary"><i class="mdi-material-info"></i></div>
-          <p class="list-group-item-heading">Inasistencias a clase</p><%= link_to('Attendances', attendances_path) %>
-          <p class="list-group-item-text">Verificá tu registro de inasistencias y retrasos.</p>
-        </div>
-      </div>
-      <div class="list-group-separator"></div>
-      <div class="list-group-item">
-        <div class="row-action-primary">
-          <%= evil_icon 'ei-eye', size: :m %>
-        </div>
-        <div class="row-content">
-          <div class="action-secondary"><i class="mdi-material-info"></i></div>
-          <h4 class="list-group-item-heading">Sanciones disciplinarias</h4>
-          <p class="list-group-item-text">Consultá las sanciones disciplinarias y apercibimientos que te han imputado.</p>
+
+      <div class="panel-default">
+        <div class="panel-body home-boxes3">      
+          <div class="list-group-item clickable">
+            <div class="row-action-primary">
+              <i class="mdi-notification-sim-card-alert"></i>
+            </div>
+            <div class="row-content">
+              <div class="action-secondary"><i class="mdi-material-info"></i></div>
+              <h4 class="list-group-item-heading">Sanciones disciplinarias</h4>
+              <h5><strong><i><%= link_to('Disciplinary Sanctions', disciplinary_sanctions_path) %></i></strong></h5>
+              <p class="list-group-item-text">Consultá las sanciones disciplinarias y apercibimientos que te han imputado.</p>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>

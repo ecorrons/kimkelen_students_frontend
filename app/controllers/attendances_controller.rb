@@ -1,4 +1,4 @@
-class MarksController < ApplicationController
+class AttendancesController < ApplicationController
   before_action :set_mark, only: [:show]
 
   # GET /marks
@@ -12,7 +12,7 @@ class MarksController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_mark
-      @mark = Mark.find(params[:id])
+    def set_attendance
+      @attendance = Attendance.find(params[:id])
     end
 end
