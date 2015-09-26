@@ -17,3 +17,12 @@
 //= require bootstrap-material-design
 //= require js-initializers
 //= require_tree .
+
+jQuery(function ($){
+
+    $(".set-school-year").on('click', function() {
+    		var year_value = $(this).text();
+        $('#school_year').val(year_value);
+        $(".school_year_form").submit();
+    });
+ });
