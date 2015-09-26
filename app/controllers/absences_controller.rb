@@ -1,8 +1,8 @@
-class MarksController < ApplicationController
+class AbsencesController < ApplicationController
+  # GET /absences
 
-  # GET /marks
   def index
-    res = Api::call '/students/5/school_years'
+    res = Api::call '/students/2003/school_years'
 
     if params[:school_year].nil?
       @school_year = res['school_years'].last
@@ -11,9 +11,9 @@ class MarksController < ApplicationController
       @school_year = params[:school_year]
     end
 
-    res_marks = Api::call "/students/5/marks/#{@school_year}"
+    res_absences = Api::call "/students/2003/absences/#{@school_year}"
 
     @school_years = res['school_years']
-    @marks = res_marks['marks']
+    @absences = res_absences['absences']
   end
 end

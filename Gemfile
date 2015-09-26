@@ -15,7 +15,6 @@ gem 'uglifier',                   '>= 1.3.0'
 gem 'turbolinks',                 '~> 2.5.1'
 gem 'rails-assets-jquery',        '~> 2.1.1'
 gem 'rails-assets-jquery-ujs',    '~> 1.0.1'
-gem 'evil_icons',                 '~> 1.7.6'
 gem 'bootstrap-material-design',  '~> 0.1.7'
 gem 'js-initializers',            '~> 0.0.3'
 
