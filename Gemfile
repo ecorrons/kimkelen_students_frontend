@@ -21,6 +21,9 @@ gem 'js-initializers',            '~> 0.0.3'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+# Pagination
+gem 'kaminari', '~> 0.16.3'
+
 group :development do
   gem 'quiet_assets',             '~> 1.0.3'
   gem 'binding_of_caller',        '~> 0.7.2'
