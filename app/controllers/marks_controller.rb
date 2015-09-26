@@ -5,7 +5,6 @@ class MarksController < ApplicationController
   def index
     response = Faraday.get (Settings.api.url + '/students/5/school_years'), content_type: 'application/json'
     res = JSON.parse response.body
-
     if params[:school_year].nil?
       @school_year = res['school_years'].last
       @school_year = @school_year['year']
