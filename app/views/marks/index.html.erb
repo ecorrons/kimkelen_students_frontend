@@ -12,7 +12,8 @@
   <%-end-%>
 
   <div class="">
-    <h4><strong><%= @marks['year']%>° Año, Estado: <%= @marks['status'] %></strong></h4>
+    <h4><strong><%= @marks['year']%>° Años </strong></h4>
+    <h5><strong>Estado: <%= @marks['status'] %></strong></h5>
   </div>
   <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade active in" id="home">
@@ -23,8 +24,8 @@
               <th>Materia</th>
               <th>Notas</th>
               <th>Promedio cursada</th>
-              <th>Reg</th>
-              <th>Comp</th>
+              <th>Regular</th>
+              <th>Complementario</th>
               <th>Previas</th>
               <th>Promedio Def.</th>
             </tr>
@@ -33,13 +34,16 @@
             <% @marks['course_subjects'].each do |course_subject|%>
             <tr>
               <td><%= course_subject['name'] %></td>
-              <td><%= course_subject['marks'] %></td>
-              <td><%= course_subject['average'] %></td>
-              <td><%= course_subject['examinations'] %></td>
-              <td><%#= "6.00" %></td>
-              <td><%#= "6.00" %></td>
-              <td><%#= "6.00" %></td>
-              <td><%#= "6.00" %></td>
+               <td>
+                <% course_subject['marks'].each do |mark| %>
+                 <%= format_mark_number(mark).html_safe %>
+                <%end%>
+              </td>
+              <td align="center"><%= format_mark(course_subject['average']) %></td>
+              <td align="center"><%= course_subject['examinations'] == [] ? '-' : format_examinations(course_subject['examinations'], "reg") %></td>
+              <td align="center"><%= course_subject['examinations'] == [] ? '-' : format_examinations(course_subject['examinations'], "comp") %></td>
+              <td align="center"><%= course_subject['repproveds'] == [] ? '-' : format_repproveds(course_subject['repproveds']) %></td>
+              <td align="center"><%= format_mark(course_subject['final_average']) unless course_subject['final_average'].nil? %></td>
             </tr>
             <%end %>
           </tbody>
