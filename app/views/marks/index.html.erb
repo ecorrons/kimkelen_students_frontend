@@ -2,86 +2,51 @@
   <h2>Notas</h2>
 
   <ul class="nav nav-tabs" style="margin-bottom: 15px;">
-      <li class="active"><a href="#home" data-toggle="tab">2010</a></li>
-      <li><a href="#profile" data-toggle="tab">2011</a></li>
-      <li class="disabled"><a>2012</a></li>
-      <li class="disabled"><a>2013</a></li>
-      <li class="disabled"><a>2014</a></li>
-      <li class="disabled"><a>2015</a></li>
+      <% @school_years.each do |school_year|%>
+        <li class="active"><a class="set-school-year" href="#" data-toggle="tab"><%= school_year['year']%></a></li>
+      <%-end-%>
   </ul>
+
+  <%= form_tag(marks_path, method: "get", class: 'school_year_form') do %>
+    <%= hidden_field_tag :school_year  %>
+  <%-end-%>
+
+  <div class="">
+    <h4><strong><%= @marks['year']%>° Año, Estado: <%= @marks['status'] %></strong></h4>
+  </div>
   <div id="myTabContent" class="tab-content">
-      <div class="tab-pane fade active in" id="home">
-        <!-- comienza la tabla -->
-         <div class="table-responsive">
-          <table class="table table-striped table-hover">
-            <thead>
-              <tr class="success">
-                <th>Materia</th>
-                <th>Nota 1</th>
-                <th>Nota 2</th>
-                <th>Nota 3</th>
-                <th>Promedio cursada</th>
-                <th>Resultado cursada</th>
-                <th>Reg</th>
-                <th>Comp</th>
-                <th>Previas</th>
-                <th>Promedio Def.</th>
-              </tr>
-            </thead>
-            <tbody>
-              <%#= content_tag_for(:tr, @marks) do |mark| %>
-                <td><%#= Biología %>Biología</td>
-                <td><%#= Primer semestre %>"7.00"</td>
-                <td><%#= "6.00" %>"6.00"</td>
-                <td><%#= "6.00" %></td>
-                <td><%#= "6.00" %></td>
-                <td><%#= "6.00" %></td>
-                <td><%#= "6.00" %></td>
-                <td><%#= "6.00" %></td>
-                <td><%#= "6.00" %></td>
-                <td><%#= "6.00" %></td>
-              <%# end %>
-            </tbody>
-          </table>
-        </div>
-        <!-- termina la tabla -->
+    <div class="tab-pane fade active in" id="home">
+       <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr class="success">
+              <th>Materia</th>
+              <th>Notas</th>
+              <th>Promedio cursada</th>
+              <th>Reg</th>
+              <th>Comp</th>
+              <th>Previas</th>
+              <th>Promedio Def.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @marks['course_subjects'].each do |course_subject|%>
+            <tr>
+              <td><%= course_subject['name'] %></td>
+              <td><%= course_subject['marks'] %></td>
+              <td><%= course_subject['average'] %></td>
+              <td><%= course_subject['examinations'] %></td>
+              <td><%#= "6.00" %></td>
+              <td><%#= "6.00" %></td>
+              <td><%#= "6.00" %></td>
+              <td><%#= "6.00" %></td>
+            </tr>
+            <%end %>
+          </tbody>
+        </table>
       </div>
-      <div class="tab-pane fade active " id="profile">
-        <!-- comienza la tabla -->
-         <div class="table-responsive">
-          <table class="table table-striped table-hover">
-            <thead>
-              <tr class="success">
-                <th>Materia</th>
-                <th>Nota 1</th>
-                <th>Nota 2</th>
-                <th>Nota 3</th>
-                <th>Promedio cursada</th>
-                <th>Resultado cursada</th>
-                <th>Reg</th>
-                <th>Comp</th>
-                <th>Previas</th>
-                <th>Promedio Def.</th>
-              </tr>
-            </thead>
-            <tbody>
-              <%#= content_tag_for(:tr, @marks) do |mark| %>
-                <td><%#= Biología %>Física</td>
-                <td><%#= Primer semestre %>"8.00"</td>
-                <td><%#= "6.00" %>"10.00"</td>
-                <td><%#= "6.00" %></td>
-                <td><%#= "6.00" %></td>
-                <td><%#= "6.00" %></td>
-                <td><%#= "6.00" %></td>
-                <td><%#= "6.00" %></td>
-                <td><%#= "6.00" %></td>
-                <td><%#= "6.00" %></td>
-              <%# end %>
-            </tbody>
-          </table>
-        </div>
-        <!-- termina la tabla -->
-      </div>
+    </div>
   </div>
 </div>
+
 
