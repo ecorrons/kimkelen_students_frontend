@@ -19,10 +19,13 @@
 //= require_tree .
 
 jQuery(function ($){
+    $(".set-school-year").on('click', function(e){
+      var YEAR_VALUE = $(this).text();
 
-    $(".set-school-year").on('click', function() {
-    		var year_value = $(this).text();
-        $('#school_year').val(year_value);
-        $(".school_year_form").submit();
+      $('#school_year').val(YEAR_VALUE);
+      e.preventDefault();
+      $("#school_year_form").submit();
+
+      return false;
     });
  });

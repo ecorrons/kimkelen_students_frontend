@@ -1,20 +1,19 @@
 <div class="col-md-12">
-  <h2>Sanciones Disciplinarias</h2>
+  <div class="page-header">
+    <h2>Sanciones disciplinarias <small> | <%= @person.firstname %> <%= @person.lastname %> - año lectivo <%= @school_year %></h1></small></h2>
+  </div>
 
-  <ul class="nav nav-tabs" style="margin-bottom: 15px;">
-      <% @school_years.each do |school_year|%>
-        <li class="active"><a class="set-school-year" href="#" data-toggle="tab"><%= school_year['year']%></a></li>
-      <%-end-%>
-  </ul>
+  <%= render partial: "shared/school_years_tabs", locals: { school_years: @school_years, school_year: @school_year } %>
 
-  <%= form_tag(disciplinary_sanctions_path, method: "get", class: 'school_year_form') do %>
+  <%= form_tag(disciplinary_sanctions_path, method: "get", id: 'school_year_form') do %>
     <%= hidden_field_tag :school_year  %>
   <%-end-%>
 
-  <div class="">
-    <h4><strong> Total de inasistencias: <%= @disciplinary_sanctions["total_disciplinary_sanctions"]%></strong></h4>
+  <div class="table-header">
+    <h5><strong>Total de sanciones: <%= @disciplinary_sanctions["total_disciplinary_sanctions"] %></strong></h5>
   </div>
-  
+
+  <% unless @disciplinary_sanctions["total_disciplinary_sanctions"].zero? %>
   <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade active in" id="home">
        <div class="table-responsive">
@@ -43,4 +42,5 @@
       </div>
     </div>
   </div>
+<% end %>
 </div>

@@ -5,7 +5,7 @@ module MarksHelper
 	end
 
 	def format_mark(mark)
-		"%.2f" % mark
+		mark ? ("%.2f" % mark) : '-'
 	end
 
 	def format_examinations(examination, examination_instance)

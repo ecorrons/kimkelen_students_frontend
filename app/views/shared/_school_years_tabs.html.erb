@@ -1,0 +1,7 @@
+<ul class="breadcrumb">
+  <% @school_years.each do |school_year|%>
+    <li class=<%=@school_year == school_year['year'].to_s ? "active-school-year" : "" %>>
+      <a class="set-school-year" href="#" data-toggle="tab"><%= school_year['year']%></a>
+    </li>
+  <%-end-%>
+</ul>
