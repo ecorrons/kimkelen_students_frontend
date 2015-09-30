@@ -12,7 +12,7 @@ gem 'bootstrap-sass',             '~> 3.3.0'
 gem 'autoprefixer-rails',         '~> 4.0.0'
 gem 'bootstrap-generators',       '~> 3.2.0'
 gem 'uglifier',                   '>= 1.3.0'
-gem 'turbolinks',                 '~> 2.5.1'
+
 gem 'rails-assets-jquery',        '~> 2.1.1'
 gem 'rails-assets-jquery-ujs',    '~> 1.0.1'
 gem 'bootstrap-material-design',  '~> 0.1.7'

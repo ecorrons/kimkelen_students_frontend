@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  root to: 'welcome#index'
+  root to: 'students#index'
+
+  resources :students, only: [:index, :show]
 
   resources :marks, only: [:index]
 

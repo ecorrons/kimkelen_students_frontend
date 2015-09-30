@@ -1,4 +1,4 @@
-<p style="margin: 75px;"></p>
+<p style="margin: 65px;"></p>
 
 <div class="row">
   <div class="col-md-7">
@@ -6,9 +6,9 @@
       <div class="caption">
         <%= image_tag("student2.jpg", alt: "photo", class: 'photo') %>
         <div class="data">
-          <h3 class="name"><%= @person['firstname'] %></h3>
-          <span class="orientation">6°C Orientación Ciencias Naturales</span>
-          <h1><i class="mdi-content-add-circle col-md-offset-10 icon-plus"></i></h1>
+          <h3 class="name"><%= @person.firstname %> <%= @person.lastname %></h3>
+          <span class="orientation">Legajo N° <%= @student.global_file_number %></span>
+          <a href="#" class="btn btn-sm plus"><span class="glyphicon glyphicon-plus"></span> Ver más</a>
         </div>  
 
       </div>
@@ -26,9 +26,9 @@
             </div>
             <div class="row-content">
               <div class="action-secondary"><i class="mdi-material-info"></i></div>
-              <p class="list-group-item-heading"><%= t('Marks') %></p>
-              <h5><strong><i><%= link_to('Marks', marks_path) %></i></strong></h5>
-              <p class="list-group-item-text">Mirá tu historial de calificaciones de cursadas y finales de materias.</p>
+
+              <h3><strong><%= link_to('Calificaciones', marks_path) %></i></strong></h3>
+              <i><p class="list-group-item-text">Consultá tu historial académico de calificaciones.</p></i>
             </div>
           </div>
         </div>     
@@ -42,9 +42,9 @@
             </div>
             <div class="row-content">
               <div class="action-secondary"><i class="mdi-material-info"></i></div>
-              <p class="list-group-item-heading">Inasistencias a clase</p>
-              <h5><strong><i><%= link_to('Attendances', absences_path) %></i></strong></h5>
-              <p class="list-group-item-text">Verificá tu registro de inasistencias y retrasos.</p>
+
+              <h3><strong><%= link_to('Inasistencias', absences_path) %></strong></h3>
+              <i><p class="list-group-item-text">Verificá tu registro de inasistencias y retrasos a clases.</p></i>
             </div>
           </div>
         </div>
@@ -58,9 +58,9 @@
             </div>
             <div class="row-content">
               <div class="action-secondary"><i class="mdi-material-info"></i></div>
-              <h4 class="list-group-item-heading">Sanciones disciplinarias</h4>
-              <h5><strong><i><%= link_to('Disciplinary Sanctions', disciplinary_sanctions_path) %></i></strong></h5>
-              <p class="list-group-item-text">Consultá las sanciones disciplinarias y apercibimientos que te han imputado.</p>
+
+              <h3><strong><%= link_to('Sanciones disciplinarias', disciplinary_sanctions_path) %></strong></h3>
+              <i><p class="list-group-item-text">Chequeá las sanciones disciplinarias y apercibimientos que te han imputado.</p></i>
             </div>
           </div>
         </div>
@@ -69,3 +69,4 @@
     </div>
   </div>
 </div>
+<p style="margin: 65px;"></p>
