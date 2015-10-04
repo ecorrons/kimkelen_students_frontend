@@ -10,7 +10,7 @@ module MarksHelper
 
 	def format_examinations(examination, examination_instance)
 		if examination_instance == "reg" && examination.first["examination_number"] == 1
-			"#{ examination.first['is_absent'] == 0 ? format_mark(examination.first['mark']) : 'A'}"+" (#{ I18n.l examination.first['date'].to_date unless examination.first['date'] == '' })"
+			"#{ examination.first['is_absent'] == 0 ? format_mark(examination.first['mark']) : 'A'}"+" (#{ I18n.l examination.first['date'].to_date unless examination.first['date'].blank? })"
 		else
 			if examination.last["examination_number"] == 2
 				"#{ examination.last['is_absent'] == 0 ? format_mark(examination.last['mark']) : 'A'}"

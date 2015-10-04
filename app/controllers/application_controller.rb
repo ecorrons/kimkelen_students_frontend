@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def set_student
     # For development. Remove this method when implementing authentication
-    res = Api::call "/students/2003"
+    res = Api::call "/students/904"
     @student = OpenStruct.new res['student']
   end
 
