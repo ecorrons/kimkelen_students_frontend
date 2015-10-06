@@ -12,12 +12,15 @@
   <%= favicon_link_tag 'favicon.ico' %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
   <%= render 'navbar' %>
   <%= render 'flashes' %>
   <div class="container">
     <%= yield %>
   </div>
-  <%= render 'footer' %>
+  <div id="footer">
+    <%= render 'footer' %>
+  </div>
 </body>
 </html>
