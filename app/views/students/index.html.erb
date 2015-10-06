@@ -1,73 +1,34 @@
 <div class="col-md-12">
-  <p style="margin: 65px;"></p>
-
-<div class="row">
-  <div class="col-md-8">
-     <div class="thumbnail">
-      <div class="caption">
-        <%= image_tag("student2.jpg", alt: "photo", class: 'photo') %>
-        <div class="data">
-          <h3 class="name"><%= @person.firstname %> <%= @person.lastname %></h3>
-          <span class="orientation">Legajo N° <%= @student.global_file_number %></span>
-          <a href="#" class="btn btn-sm plus"><span class="glyphicon glyphicon-plus"></span> Ver más</a>
-        </div>  
-
+  <div class="row">
+    <div class="tutor-container">
+      <div class="col-md-6">
+        <div class="tutor-view">
+         <%= image_tag("student2.jpg", alt: "photo", class: 'photo') %>
+        </div>
+      </div>
+      <div class="col-md-3 tutor-name">
+        <div class="page-header">
+          <h1><strong><%= @person.firstname%>, <%= @person.lastname %></strong></h1>
+          <p class="identification-type"><strong>Legajo N° <%= @student.global_file_number %></strong></p>
+        </div>
+      </div>
+      <legend></legend>
+      <div class="col-md-3 children children1">
+        <i class="mdi-action-grade"></i>
+        <span>
+          <h3><%= link_to('Calificaciones', marks_path) %></h3>
+          <p class="list-group-item-text">Consultá tu historial académico <br> de calificaciones.</p>
+          </span>
+      </div>
+      <div class="col-md-3 children children2">
+        <i class="mdi-action-event"></i><span><h3><%= link_to('Inasistencias', absences_path) %></h3>
+        <p class="list-group-item-text">Verificá tu registro de inasistencias 
+        <br>y retrasos a clases.</p></span>
+      </div>
+      <div class="col-md-3 children children3">
+        <i class="mdi-communication-live-help"></i><span><h3><%= link_to('Sanciones disciplinarias', disciplinary_sanctions_path) %></h3>
+        <p class="list-group-item-text">Chequeá las sanciones disciplinarias <br> y apercibimientos.</p></span>
       </div>
     </div>
   </div>
-
-  <div class="col-md-4 side-list">
-    <div class="list-group">
-
-      <div class="panel-default">
-        <div class="panel-body home-boxes1">
-          <div class="list-group-item clickable">
-            <div class="row-action-primary">
-              <i class="mdi-action-grade"></i>
-            </div>
-            <div class="row-content">
-              <div class="action-secondary"><i class="mdi-material-info"></i></div>
-              <h3><strong><%= link_to('Calificaciones', marks_path) %></i></strong></h3>
-              <i><p class="list-group-item-text">Consultá tu historial académico de calificaciones.</p></i>
-              <br>
-            </div>
-          </div>
-        </div>     
-      </div>
-
-      <div class="panel-default">
-        <div class="panel-body home-boxes2">
-          <div class="list-group-item clickable">
-            <div class="row-action-primary">
-              <i class="mdi-action-event"></i>
-            </div>
-            <div class="row-content">
-              <div class="action-secondary"><i class="mdi-material-info"></i></div>
-              <h3><strong><%= link_to('Inasistencias', absences_path) %></strong></h3>
-              <i><p class="list-group-item-text">Verificá tu registro de inasistencias y retrasos a clases.</p></i>
-              <br>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="panel-default">
-        <div class="panel-body home-boxes3">      
-          <div class="list-group-item clickable">
-            <div class="row-action-primary">
-              <i class="mdi-notification-sim-card-alert"></i>
-            </div>
-            <div class="row-content">
-              <div class="action-secondary"><i class="mdi-material-info"></i></div>
-              <h3><strong><%= link_to('Sanciones disciplinarias', disciplinary_sanctions_path) %></strong></h3>
-              <i><p class="list-group-item-text">Chequeá las sanciones disciplinarias y apercibimientos.</p></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<p style="margin: 65px;"></p>
 </div>

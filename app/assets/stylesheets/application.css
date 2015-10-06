@@ -218,3 +218,121 @@ th {
 .list-group.list-group-item .row-picture, .list-group .list-group-item .row-action-primary {
   padding-top: 3em;
 }
+
+
+
+
+
+
+
+.tutor-view{
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding-left: 0em;
+}
+
+
+.children {
+  background-color: white;
+  color: white;
+  padding-top: 1em;
+  padding-bottom: 8em;
+  max-height: 11em;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  width: 31%;
+  text-align: center;
+}
+
+.child {
+    text-transform: uppercase;
+    font-size: 15px;
+    margin: 0 4px 0;
+    padding: 7px;
+    font-weight: 600;
+}
+
+.tutor-name{
+  margin-top: 5em;
+  margin-left: 10em;
+  margin-bottom: 2em;
+}
+
+.list-group ul li{
+  text-decoration: none;
+}
+
+.jumbotron p{
+  font-size: 16px !important;
+  color:gray;
+}
+
+
+.identification-type {
+  font-size: 1.2em;
+  background-color: #7F52AC;
+  padding-left: 2em;
+  color: #F9F9F9;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+.children1 {
+  background-color: #03a9f4;
+  margin-top: 0.5em;
+  -webkit-box-shadow: inset -1px -1px 33px -2px rgba(0,0,0,0.24);
+  -moz-box-shadow: inset -1px -1px 33px -2px rgba(0,0,0,0.24);
+  box-shadow: inset -1px -1px 33px -2px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 11px 9px 21px -1px rgba(0,0,0,0.17);
+  -moz-box-shadow: 11px 9px 21px -1px rgba(0,0,0,0.17);
+  box-shadow: 11px 9px 21px -1px rgba(0,0,0,0.17);
+}
+
+.children2 {
+  background-color: #4cae4c;
+  margin-top: 0.5em;
+  -webkit-box-shadow: inset -1px -1px 33px -2px rgba(0,0,0,0.24);
+  -moz-box-shadow: inset -1px -1px 33px -2px rgba(0,0,0,0.24);
+  box-shadow: inset -1px -1px 33px -2px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 11px 9px 21px -1px rgba(0,0,0,0.17);
+  -moz-box-shadow: 11px 9px 21px -1px rgba(0,0,0,0.17);
+  box-shadow: 11px 9px 21px -1px rgba(0,0,0,0.17);
+}
+
+.children3 {
+ background-color: #3f51b5;
+  margin-top: 0.5em;
+  -webkit-box-shadow: inset -1px -1px 33px -2px rgba(0,0,0,0.24);
+  -moz-box-shadow: inset -1px -1px 33px -2px rgba(0,0,0,0.24);
+  box-shadow: inset -1px -1px 33px -2px rgba(0,0,0,0.24);
+  -webkit-box-shadow: 11px 9px 21px -1px rgba(0,0,0,0.17);
+  -moz-box-shadow: 11px 9px 21px -1px rgba(0,0,0,0.17);
+  box-shadow: 11px 9px 21px -1px rgba(0,0,0,0.17);
+}
+
+.children a {
+  color:white;
+}
+
+.children i {
+  color: white;
+  font-size: 2em;
+}
+
+.tutor-container {
+  margin-top: 2em;
+  background-color: white;
+  padding-left: 2em;
+  -webkit-box-shadow: inset -1px 4px 43px -8px rgba(0,0,0,0.19);
+  -moz-box-shadow: inset -1px 4px 43px -8px rgba(0,0,0,0.19);
+  box-shadow: inset -1px 4px 43px -8px rgba(0,0,0,0.19);
+}
+
+.tutor-child i{
+  color: black;
+}
+
+.children a:hover, a:focus {
+    color: #FFFFFF;
+    text-decoration: none;
+}
