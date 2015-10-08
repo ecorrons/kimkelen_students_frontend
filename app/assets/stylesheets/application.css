@@ -333,6 +333,5 @@ th {
 }
 
 .children a:hover, a:focus {
-    color: #FFFFFF;
-    text-decoration: none;
+  text-decoration: none;
 }
